@@ -1,10 +1,10 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 3, Problem 1
 Object Oriented Programming (50:198:113), Spring 2016
 
-This module implements some recursive functions. Function documentation 
-omitted by instructor. 
+This module implements some recursive functions. Function documentation
+omitted by instructor.
 """
 
 def replace_element(L, oldel, newel):
@@ -34,4 +34,3 @@ def occurrences(astr, substr):
         return 1 + occurrences(astr[len(substr):], substr)
     else:
         return occurrences(astr[1:], substr)
-

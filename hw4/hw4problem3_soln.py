@@ -1,6 +1,6 @@
 """
 Module for Homework 4, Problem 3
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Object-Oriented Programming (50:198:113), Spring 2016
 
 """
@@ -61,13 +61,13 @@ class ChangeJar:
         # If we couldn't make exact change with dimes, nickels, and pennies,
         # then it means that we cannot make exact change from this change
         # jar. This is because if there is exact change with the smallest number
-        # of coins made entirely of nickels and pennies, then it must mean that 
-        # there are no dimes in the change jar because otherwise either a pair of 
+        # of coins made entirely of nickels and pennies, then it must mean that
+        # there are no dimes in the change jar because otherwise either a pair of
         # nickels can be replaced by a dime (thus using fewer coins), or, if only one
-        # nickel is used to make change, ten pennies can be replaced by a dime, or 
+        # nickel is used to make change, ten pennies can be replaced by a dime, or
         # if fewer than ten pennies are used, the nickel and five pennies can be
         # replaced by a dime.
-            
+
         if leftover_amt > 0:
             print("Cannot make exact change.")
             for coinvalue in [10, 5, 1]:
@@ -84,7 +84,7 @@ class ChangeJar:
         if idx not in [25, 10, 5, 1]:
             raise IndexError
         return self.changedict[idx]
-            
+
     def insert(self, coin_value, num_coins):
         """
         Add num_coins number of coins of denomination coin_value
@@ -143,4 +143,3 @@ class ChangeJar:
         to each other.
         """
         return not self == other
-        

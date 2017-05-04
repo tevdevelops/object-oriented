@@ -1,5 +1,5 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 3, Problem 2
 Object Oriented Programming (50:198:113), Spring 2016
 
@@ -41,12 +41,12 @@ class StraightLine:
         if lstr != "":  # This means that the x-coefficient is not 0
             if self.b > 0:
                 if self.b == 1:
-                    lstr += " + y" 
+                    lstr += " + y"
                 else:
                     lstr += " + " + str(abs(self.b)) + "y"
             elif self.b < 0:
                 if self.b == -1:
-                    lstr += " - y" 
+                    lstr += " - y"
                 else:
                     lstr += " - " + str(abs(self.b)) + "y"
         else:
@@ -144,4 +144,3 @@ class StraightLine:
         and False otherwise
         """
         return not self == other
-

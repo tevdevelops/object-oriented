@@ -1,9 +1,9 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 5, Problem 1
 Object Oriented Programming (50:198:113), Spring 2016
 
-No documentation included due to time constraints! 
+No documentation included due to time constraints!
 """
 
 import math
@@ -37,7 +37,7 @@ class Point:
         second = q.x * r.y - q.x * self.y
         third = q.y * self.x - q.y * r.x
         return (first + second + third) < 0
-    
+
     def __str__(self):
         return "(%.2f, %.2f)"%(self.x, self.y)
 
@@ -118,7 +118,7 @@ class EquiTriangle(ConvPoly):
         Area = base * height/2 = sqrt(3) * (side length)^2 / 4.0
         """
         return (math.sqrt(3) * (self[0].distance(self[1])**2)/4.0)
-        
+
 class Rectangle(ConvPoly):
     def __init__(self, init_len, init_wid):
         ConvPoly.__init__(self, Point(0,0),
@@ -131,7 +131,7 @@ class Rectangle(ConvPoly):
         Area = length * width
         """
         return (self[0].distance(self[1]) * self[1].distance(self[2]))
-        
+
 class Square(Rectangle):
     def __init__(self, init_len):
         Rectangle.__init__(self, init_len, init_len)

@@ -1,9 +1,9 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 1, Problem 1
 Object Oriented Programming (50:198:113), Spring 2016
 
-This module contains functions about magic numbers. A 
+This module contains functions about magic numbers. A
 magic number m is a number greater than 1 whose divisors
 (other than m) add up to m.
 """
@@ -31,4 +31,3 @@ def magic_list(num):
         if magic(i):
             L.append(i)
     return L
-

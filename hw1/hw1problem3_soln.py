@@ -1,5 +1,5 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 1, Problem 3
 Object Oriented Programming (50:198:113), Spring 2016
 
@@ -18,7 +18,7 @@ def pig_latin_word(word):
     else:
         i = 0
 
-        # We use a while loop to get to the first 
+        # We use a while loop to get to the first
         # vowel in word
         while (i < len(word)) and (word[i] not in "aeiouAEIOU"):
             i = i + 1
@@ -27,7 +27,7 @@ def pig_latin_word(word):
         # cluster at the beginning of word is simply word[:i],
         # which is moved to the end of the translated pig Latin
         # word, followed by "ay"
-        
+
         pgword = word[i:] + word[:i] + "ay"
 
     return pgword
@@ -48,7 +48,7 @@ def pig_latin_sentence(eng_sentence):
 
     # Translate each word after checking if the last character
     # is a punctuation mark
-    
+
     for word in word_list:
         if word[-1] in ".!?,":
             pgword = pig_latin_word(word[:-1]) + word[-1]
@@ -58,7 +58,7 @@ def pig_latin_sentence(eng_sentence):
 
     # Return the Pig Latin sentence without the extra
     # blank space at the end.
-    
+
     return(pgsentence[:-1])
 
 def pig_latin_translator():
@@ -68,7 +68,7 @@ def pig_latin_translator():
     """
     print("                -------------------------------")
     print("                English to Pig Latin Translator")
-    print("                -------------------------------")    
+    print("                -------------------------------")
     answer = "y"
     while (answer[0].lower() == "y"):
         engSentence = input("Enter the English sentence: ")

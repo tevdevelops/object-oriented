@@ -1,17 +1,17 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 1, Problem 2
 Object Oriented Programming (50:198:113), Spring 2016
 
-This module contains three functions that allow the 
-user to play multiple games of craps. 
+This module contains three functions that allow the
+user to play multiple games of craps.
 """
 
 import random
 
 def roll_dice():
     """
-    Returns the total face value resulting from 
+    Returns the total face value resulting from
     rolling two dice (a number between 2 and 12)
     """
     return (random.randint(1, 6) + random.randint(1, 6))
@@ -44,11 +44,11 @@ def play_one_game():
 
 def craps():
     """
-    Allows the player to repeatedly play a game of Craps. The player 
-    has an initial bank amount of $1000. S/he must wager a dollar amount 
-    prior to the start of the game. The bank balance is increased or 
-    decreased by the wager amount when the player wins or loses the game, 
-    respectively. 
+    Allows the player to repeatedly play a game of Craps. The player
+    has an initial bank amount of $1000. S/he must wager a dollar amount
+    prior to the start of the game. The bank balance is increased or
+    decreased by the wager amount when the player wins or loses the game,
+    respectively.
     """
     print("                ----------------------------")
     print("                Welcome to the Craps program")

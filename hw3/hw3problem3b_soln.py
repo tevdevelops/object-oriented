@@ -1,5 +1,5 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 3, Problem 3
 Object Oriented Programming (50:198:113), Spring 2016
 
@@ -19,7 +19,7 @@ def symmetric_difference(c1, c2):
     """
 
     return (c1 - c2) + (c2 - c1)
-    
+
 def subcontainer(c1, c2):
     """
     Return True if c1 is a subcontainer of c2 and
@@ -39,7 +39,7 @@ def remove_repeats(C):
     Remove all repetitions of each item in C (one
     copy is retained)
 
-    C: A Container 
+    C: A Container
     """
     distinct_items = C.items()
     for item in distinct_items:
@@ -61,4 +61,3 @@ def similar(A, B):
         if item not in A.items():
             return False
     return True
-

@@ -1,5 +1,5 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 2, Problem 2
 Object Oriented Programming (50:198:113), Spring 2016
 
@@ -14,7 +14,7 @@ def freq_distribution(infile, distfile):
     distribution of words in input file infile. Words
     are listed in alphabetical order.
 
-    infile: a string 
+    infile: a string
     distfile: a string
     """
     freq_dict = freq_dictionary(infile)
@@ -26,7 +26,7 @@ def freq_distribution(infile, distfile):
     for k in keys:
         dfile.write(k.ljust(wordwidth) + "%7d\n"%(freq_dict[k]))
     dfile.close()
-     
+
 def ordered_freq_distribution(infile, ordered_distfile):
     """
     In output file named ordered_distfile, write the frequency
@@ -50,7 +50,7 @@ def ordered_freq_distribution(infile, ordered_distfile):
     rev_dict_pairs.sort()
     rev_dict_pairs.reverse()
 
-    # Now rev_dict_pairs has the frequencies in decreasing order, but words of 
+    # Now rev_dict_pairs has the frequencies in decreasing order, but words of
     # the same frequency are now in reverse alphabetical order. We put them
     # in correct alphabetical order in the list final_pairs
 
@@ -78,13 +78,13 @@ def ordered_freq_distribution(infile, ordered_distfile):
     for p in final_pairs:
         ofile.write(p[1].ljust(wordwidth) + "%7d\n"%(p[0]))
     ofile.close()
-    
+
 def freq_dictionary(infile):
     """
     Read in text from input text file called infile and return
-    the dictionary containing key:value pairs where key is a word 
+    the dictionary containing key:value pairs where key is a word
     occuring in infile, and value as the frequency of that word
-    in infile. A word is any consecutive sequence of letters of 
+    in infile. A word is any consecutive sequence of letters of
     the alphabet.
 
     infile: a string
@@ -103,6 +103,3 @@ def freq_dictionary(infile):
             freq_dict[word] = freq_dict.get(word, 0) + 1
     ifile.close()
     return freq_dict
-
-
-            

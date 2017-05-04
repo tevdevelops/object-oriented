@@ -1,6 +1,6 @@
 """
 Module for Homework 4, Problem 1
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Object-Oriented Programming (50:198:113), Spring 2016
 
 Class and methods have not been documented by the instructor
@@ -131,7 +131,7 @@ class Date:
             elif self.month() == other.month():
                 return self.day() < other.day()
         return False
-        
+
     def __eq__(self, other):
         return ((self.year() == other.year()) and
                 (self.month() == other.month()) and

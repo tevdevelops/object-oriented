@@ -1,18 +1,18 @@
 """
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Solution module for Homework 3, Problem 3
 Object Oriented Programming (50:198:113), Spring 2016
 
 This module implements a container class for an unordered collection
-of items in which each item may appear multiple times. 
+of items in which each item may appear multiple times.
 """
 
 class Container:
     """
     An instance stores an unordered collection of items.
-    An item may occur several times. 
+    An item may occur several times.
     """
-    
+
     def __init__(self):
         """
         Initialize the container to an empty one.
@@ -110,4 +110,3 @@ class Container:
             for n in range(min(self.count(item), other.count(item))):
                 I.insert(item)
         return I
-

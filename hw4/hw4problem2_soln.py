@@ -1,6 +1,6 @@
 """
 Module for Homework 4, Problem 2
-Author: Suneeta Ramaswami
+Author: Tevin Rivera
 Object-Oriented Programming (50:198:113), Spring 2016
 
 This module contains some functions that manipulate Date objects
@@ -13,7 +13,7 @@ def weekend_dates(m, y):
     Prints all the weekend dates in month m of year y
 
     m: an integer between 1 and 12 (inclusive)
-    y: a year 
+    y: a year
     """
     D = Date(m, 1, y)
     while D.month() == m:
@@ -42,7 +42,7 @@ def first_mondays(y):
 
 def interval_schedule(start_date, end_date, interval):
     """
-    Returns a list of Dates that occur every interval days starting 
+    Returns a list of Dates that occur every interval days starting
     at the date start_date and ending at or before end_date
 
     start_date: a Date instance
