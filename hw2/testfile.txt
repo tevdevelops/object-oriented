@@ -1,0 +1,104 @@
+
+
+
+FORMATTING A TEXT FILE
+
+
+
+The judges of an essay competition require all essays to be submitted
+electronically in a neatly formatted fashion. However, not all
+submissions follow the formatting rules, and so the judges would like
+a program that formats a file according to their formatting rules. The
+judges also require some statistics for each essay. In particular,
+they require a count of the number of non-blank lines, the number of
+words, and the average word length for each essay. In this problem,
+you are asked to write a program that does both things; that is, a
+program that formats the files, and then calculates the required
+statistics.
+
+
+
+
+For the purposes of the program and the discussion, a word is simply a
+consecutive sequence of non-whitespace characters (by this definition,
+a period or a comma by itself, surrounded by white space, would be
+counted as a word, but we'll live with that). The formatting rules for
+each essay are as follows:
+
+
+(1) There should not be any blank spaces at the beginning of a line.
+
+       (2) Two or more blank spaces should not appear
+  consecutively. That is, there should be only one blank space between
+  consecutive words.
+
+  (3) Two or more blank lines should not appear consecutively. That
+  is, there should be only one blank line between consecutive
+  paragraphs.
+
+(4) There should be at most 60 characters per line (including blank
+  spaces). Also, words should not be broken across lines. This implies
+  that in a paragraph, a newline character should appear after the
+  last complete word that will fit in a 60-character line. You may
+  assume that no single word is longer than 60 characters (seems like
+  a reasonable assumption).
+
+
+You are given the essay submission in a file called {\tt
+  essay.txt}. Format this file according to the rules described above
+  and compute the required statistics. You should do this in three
+  steps:
+
+(1) First, remove all extra white space (extra spaces between words,
+  extra spaces at the beginning of a line, and extra blank lines
+  between paragraphs) from essay.txt and output the result into a file
+  called essay_neb.txt.
+
+(2) Next, adjust the length of the lines in essay_neb.txt to 60
+characters, and output the result into a file called essay_final.txt.
+
+(3) Finally, count the number of (non-blank) lines, the number of
+  words, and the average word length for the text in 
+  essay_final.txt. Output the result, with the appropriate headings,
+  into a file called essay_stats.txt. The average word
+  length is simply the sum of the word lengths divided by the number
+  of words.
+
+
+Your program should contain the following functions:
+
+
+ A function called {\tt RemoveExtraWhiteSpace} that takes an input
+  file stream and an output file stream as arguments. The function may
+  assume that both file streams are already open and attached to the
+  appropriate files. This function should carry out the task described
+  in step (1) above.
+
+ A function called {\tt AdjustLineLength} which takes an input file
+  stream and an output file stream as arguments (also assumed to be
+  open). This function should carry out the task described in step (2)
+  above. Keep in mind that words should not be broken across
+  lines. This implies that in the output file, a newline character
+  should appear after the last complete word that will fit in a
+  60-character line. This should be true for every line of a
+  paragraph. Also make sure that consecutive paragraphs continue to be
+  separated by a blank line.
+
+  Hint: Think of writing into the output file one word at a time,
+  while keeping track of how many characters have been written so far
+  (don't forget to count the space between words as well). Observe
+  that you need to ``look ahead'' in order to decide if the next word
+  will fit within the 60-character limit. You cannot simply start
+  writing into the output file, because if that word does not fit
+  within the 60-character limit, there is no way to backtrack and
+  erase the word. Instead, first store the current word in an
+  array. Once you know its length, you can then decide if it should go
+  in the current line or the next one.
+
+ A function called {\tt EssayStatistics} which takes an input
+  file stream and an output file stream as arguments (again, assumed
+  to be open). This function should carry out the task described in
+  step (3) above.
+
+
+

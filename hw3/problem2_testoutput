@@ -1,0 +1,69 @@
+
+-------------------------------------------------------
+Testing StraigtLine class implementation in problem2.py
+-------------------------------------------------------
+
+Four StraightLine objects have been created. Testing __str__ method:
+--------------------------------------------------------------------
+
+line1:  2x = 3
+line2:  3y = 2
+line3:  2x + 5y = 4
+line4:  x + 2y = -3
+
+Testing slope() method
+----------------------
+
+The slope of  2x = 3  is undefined (it is vertical)
+The slope of  3y = 2  is 0.00
+The slope of  2x + 5y = 4  is -0.40
+The slope of  x + 2y = -3  is -0.50
+
+Testing yintercept() and xintercept() methods
+---------------------------------------------
+
+The y-intercept of  2x = 3  is undefined (it is vertical)
+The x-intercept of  2x = 3  is 1.50
+ 
+The y-intercept of  3y = 2  is 0.67
+The x-intercept of  3y = 2  is undefined (it is horizontal)
+ 
+The y-intercept of  2x + 5y = 4  is 0.80
+The x-intercept of  2x + 5y = 4  is 2.00
+ 
+The y-intercept of  x + 2y = -3  is -1.50
+The x-intercept of  x + 2y = -3  is -3.00
+ 
+
+Testing parallel() method
+-------------------------
+
+Lines  2x = 3  and  x = -1  are parallel. (CORRECT ANSWER)
+Lines  4x + 10y = -10  and  2x + 5y = 4  are parallel. (CORRECT ANSWER)
+Lines  2x + 5y = 4  and  x + 2y = -3  are NOT parallel. (CORRECT ANSWER)
+
+Testing perpendicular() method
+------------------------------
+
+Lines  2x = 3  and  3y = 2  are perpendicular. (CORRECT ANSWER)
+Lines  -2x + y = 3  and  x + 2y = -3  are perpendicular. (CORRECT ANSWER)
+Lines  2x + 5y = 4  and  x + 2y = -3  are NOT perpendicular. (CORRECT ANSWER)
+
+Testing intersection() method
+-----------------------------
+
+Intersection of lines  2x = 3  and  x = -1  is  None
+Intersection of lines  2x + 5y = 4  and  4x + 10y = -10  is  None
+Intersection of lines  2x = 3  and  3y = 2  is  (1.5, 0.6666666666666666)
+Intersection of lines  x + 2y = -3  and  -2x + y = 3  is  (-1.8, -0.6)
+Intersection of lines  2x + 5y = 4  and  x + 2y = -3  is  (-23.0, 10.0)
+
+Testing equality and inequality operators
+-----------------------------------------
+
+Lines  x + 2y = -3  and  2x + 4y = -6  are equal. (CORRECT ANSWER)
+Lines  2x + 5y = 4  and  x + 2y = -3  are NOT equal. (CORRECT ANSWER)
+Lines  2x = 3  and  2x = 3  are equal. (CORRECT ANSWER)
+
+That's all, folks! Goodbye.
+
